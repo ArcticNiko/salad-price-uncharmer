@@ -1,0 +1,20 @@
+# Compiled TypeScript and other build files
+/dist/
+/build/
+/lib/
+
+# Dependencies
+node_modules/
+
+# Visual Studio Code workspace preferences
+.vscode
+
+# Environment variables and secrets
+.env
+.env.local
+
+# Logs and temporary files
+npm-debug.log*
+*.log
+tmp/
+.parcel-cache

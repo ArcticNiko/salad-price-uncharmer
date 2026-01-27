@@ -1,0 +1,24 @@
+{
+  "name": "salad-price-uncharmer",
+  "version": "0.0.2",
+  "description": "",
+  "scripts": {
+    "build-userscript": "parcel build src/index.ts --target userscript --dist-dir dist --no-source-maps && node scripts/prepend-meta.cjs",
+    "build-greasyfork": "parcel build src/index.ts --no-optimize --target userscript --dist-dir dist --no-source-maps && node scripts/prepend-meta.cjs"
+  },
+  "author": "logan.usw",
+  "license": "MIT",
+  "type": "module",
+  "targets": {
+    "userscript": {
+      "context": "browser",
+      "includeNodeModules": true,
+      "outputFormat": "global",
+      "distDir": "dist"
+    }
+  },
+  "devDependencies": {
+    "parcel": "^2.16.3",
+    "typescript": "^5.9.3"
+  }
+}
