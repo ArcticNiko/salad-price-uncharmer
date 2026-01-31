@@ -1,6 +1,6 @@
 {
   "name": "salad-price-uncharmer",
-  "version": "0.1.5",
+  "version": "0.2.6",
   "description": "",
   "scripts": {
     "build": "parcel build src/index.ts --target userscript --dist-dir dist --no-source-maps && node scripts/prepend-meta.cjs",

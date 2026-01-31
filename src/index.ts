@@ -1,16 +1,28 @@
+import priceSelectors from "./price-selectors.json" with {type: "json"}
 const PRICE_REGEX = /^\$\d+\.\d{2}$/
 
 const priceWatcher = new MutationObserver(mutations => { // scan every new price
    mutations.forEach(function(mutation) {
-      const prices = (mutation.target as HTMLBodyElement).querySelectorAll("div.c01113:not(.price-processed)") // get every new price
+      // get appropriate selectors for the current page
+      const selectors: string[] = []
+
+      for (const pathName of Object.keys(priceSelectors)) { // iterate thru & test every url path regex
+         const pathRegex = new RegExp(pathName)
+
+         if (pathRegex.test(location.pathname)) {
+            // @ts-ignore gets mad about priceSelectors[location.pathname], but this loop is eliminating the chance for non-existent keys to be accessed
+            selectors.push(...priceSelectors[pathName]) // add selectors for the matched path
+         }
+      }
+      
+      const prices = (<HTMLBodyElement>mutation.target).querySelectorAll(selectors.join(":not(.price-processed), ") + ":not(.price-processed)") // get every new price with the appropriate selectors
 
       prices.forEach(async price => { // process each price
-         console.debug("New price:", price)
-         const priceElem = <HTMLDivElement>price
+         const priceElem = <HTMLElement>price
          const priceObject = parsePrice(priceElem.innerText) 
          
          // start rounding price up
-         if (priceObject.cents >= 95) { // condition 3: cents are .95+
+         if (priceObject.cents >= 95) { // condition 4: cents are .95+
             priceObject.dollars++
             priceObject.cents = 0
          } else { // no condition matched
@@ -41,4 +53,4 @@ function parsePrice(price: string): {dollars: number, cents: number} {
    return {dollars: brokenPrice[0]!, cents: brokenPrice[1]!}
 }
 
-console.log("Salad Price Uncharmer v0.1.5-1 has started!")
+console.log("Salad Price Uncharmer v0.2.6-1 has started!")
