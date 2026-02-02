@@ -28,7 +28,7 @@ This is the beta stage, where the userscript has all of its planned features imp
 These are the release candidate versions, which are versions that may become the final stable release. The final testing is done here, and if no major bugs or issues are found, then the tested release candidate will become the stable release.
 
 ## Release (v1.x versions)
-v1.x versions of Candy Cane will use the versioning `v1.x.x-x`. From now on, the versioning system will work similarly to semantic versioning.
+v1.x versions of Salad Price Uncharmer will use the versioning `v1.x.x-x`. From now on, the versioning system will work similarly to semantic versioning.
 
 The major version (v**1**.x.x-x) will stay at 1 to indicate its status as a v1.x version. 
 The minor version (v1.**x**.x-x) will indicate new features, major code improvements, user-facing enhancements, and general major improvements.
