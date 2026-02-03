@@ -18,10 +18,12 @@ I'm laying out the first lines of code here. While it'll be able to round prices
 I'm now adding compatiblility with more prices, making sure that no prices are left behind.
 #### v0.3 (alpha 2)
 I'm now writing the code to round a price up based on multiple conditions.
-#### v0.4 (alpha 3)
-I'm now replacing the prices with a skeleton (placeholder) until they are rounded up. This is so the unrounded prices doesn't reach the user, affecting their purchasing thoughts.
+#### ~~v0.4 (alpha 3)~~
+~~I'm now replacing the prices with a skeleton (placeholder) until they are rounded up. This is so the unrounded prices doesn't reach the user, affecting their purchasing thoughts.~~
 
-This milestone will also house the feature-complete alpha version of the userscript.
+~~This milestone will also house the feature-complete alpha version of the userscript.~~
+
+This userscript rounds prices up so fast that a skeleton is not needed, so this milestone has been cancelled.
 #### v0.5-0.8 (beta 1-4)
 This is the beta stage, where the userscript has all of its planned features implemented, but may have bugs or rough edges. The beta milestones aims to polish the userscript for release, adding the final touches. The higher the milestone, the more progress we've made in the beta stage.
 #### v0.9 (release candidates)

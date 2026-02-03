@@ -89,7 +89,7 @@ function parsePrice(price: string): PriceObject {
 function roundPrice(price: PriceObject): {condition: 0 | 1 | 2 | 3 | 4, price: PriceObject} {
    const roundedPrice = price
 
-   if (price.dollars % 100 >= 90) { // condition 2: $10 off nearest hundred
+   if (price.dollars >= 100 && price.dollars % 100 >= 90) { // condition 2: $10 off nearest hundred & $100+
       roundedPrice.dollars = Math.round(price.dollars / 100) * 100
       roundedPrice.cents = 0
       return {condition: 2, price: roundedPrice}
@@ -110,4 +110,4 @@ function roundPrice(price: PriceObject): {condition: 0 | 1 | 2 | 3 | 4, price: P
    }
 }
 
-console.log("Salad Price Uncharmer v0.3.44-1 has started!")
+console.log("Salad Price Uncharmer v0.5.1-1 Beta has started!")

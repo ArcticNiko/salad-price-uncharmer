@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Salad Price Uncharmer
 // @namespace    greasyfork.org/en/users/1213777-logan-usw
-// @version      0.3.4-1
+// @version      0.5.1-1
 // @description  Round .99 prices up and free your mind from charm pricing.
 // @author       Logan
 // @match        https://salad.com/*

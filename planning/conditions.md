@@ -1,13 +1,13 @@
 # Rounding conditions
 A price must meet one of these conditions to be rounded up. The userscript checks condition #1 first, and will move on to the next condition if the first one isn't matched.
 
-## Condition 1: It's $10.05 or less off the nearest hundred
+## Condition 1: It's $10 or less off the nearest hundred and is over $100
 In this case, the price will be rounded up to the nearest hundred.
 
 Examples:
 * $1090.00 -> $1,100.00
 
-## Condition 2: It's $1.05 or less off the nearest ten and is over $10
+## Condition 2: It's $1 or less off the nearest ten and is over $10
 In this case, the price will be rounded up to the nearest ten.
 
 Examples:
